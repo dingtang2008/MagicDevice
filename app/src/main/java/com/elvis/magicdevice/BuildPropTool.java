@@ -98,7 +98,22 @@ public class BuildPropTool{
 		new File(tempFile).delete();
 		return values;
 	}
+	public static Properties getPropMap(){
+		final Properties prop = new Properties();
+		Process process = null;
+		DataOutputStream os = null;
+		String[] values = {};
 
+		try{
+			FileInputStream in = new FileInputStream(new File("/system/build.prop"));
+			prop.load(in);
+			in.close();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+
+		return prop;
+	}
 	/**
 	 * Gets a property's name and value and stores them in a HashMap
 	 * 

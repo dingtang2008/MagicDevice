@@ -2,6 +2,7 @@ package com.elvis.magicdevice.MainScreen;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.elvis.magicdevice.BuildPropTool;
+import com.elvis.magicdevice.Content.Utils;
 import com.elvis.magicdevice.MainScreen.ui.BootstrapButton;
 import com.elvis.magicdevice.MainScreen.ui.PinnedHeaderExpandableListView;
 import com.elvis.magicdevice.MainScreen.ui.StickyLayout;
@@ -33,7 +36,8 @@ public class MainActivity extends Activity implements
     private ArrayList<List<People>> childList;
 
     private GroupExpandableListAdapter adapter;
-    private String[] groupName = new String[]{"手机信息", "位置", "备份"};
+    private String[] groupName = new String[]{"设备信息", "模拟位置", "备份"};
+    public static final Properties prop = BuildPropTool.getPropMap();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,11 +80,11 @@ public class MainActivity extends Activity implements
             ArrayList<People> childTemp;
             if (i == 0) {
                 childTemp = new ArrayList<People>();
-                for (int j = 0; j < 13; j++) {
+                for (String item:Utils.info) {
                     People people = new People();
-                    people.setName("yy-" + j);
+                    people.setName(item.toString());
                     people.setAge(30);
-                    people.setAddress("sh-" + j);
+                    people.setAddress(prop.getProperty(item));
 
                     childTemp.add(people);
                 }
@@ -198,10 +202,10 @@ public class MainActivity extends Activity implements
 
                 childHolder.textName = (TextView) convertView
                         .findViewById(R.id.name);
-                childHolder.textAge = (TextView) convertView
-                        .findViewById(R.id.age);
+//                childHolder.textAge = (TextView) convertView
+//                        .findViewById(R.id.age);
                 childHolder.textAddress = (TextView) convertView
-                        .findViewById(R.id.address);
+                        .findViewById(R.id.age);
                 childHolder.imageView = (ImageView) convertView
                         .findViewById(R.id.image);
                 final BootstrapButton button = (BootstrapButton) convertView
@@ -220,8 +224,8 @@ public class MainActivity extends Activity implements
 
             childHolder.textName.setText(((People) getChild(groupPosition,
                     childPosition)).getName());
-            childHolder.textAge.setText(String.valueOf(((People) getChild(
-                    groupPosition, childPosition)).getAge()));
+//            childHolder.textAge.setText(String.valueOf(((People) getChild(
+//                    groupPosition, childPosition)).getAge()));
             childHolder.textAddress.setText(((People) getChild(groupPosition,
                     childPosition)).getAddress());
 
@@ -257,7 +261,6 @@ public class MainActivity extends Activity implements
 
     class ChildHolder {
         TextView textName;
-        TextView textAge;
         TextView textAddress;
         ImageView imageView;
     }
