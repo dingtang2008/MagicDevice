@@ -52,7 +52,7 @@ public class RootShell {
      * by default for the 3 callback methods for Command.
      * <p/>
      * By disabling this all callbacks will be called from a thread other than
-     * the main UI thread.
+     * the dialog UI thread.
      */
     public static boolean handlerEnabled = true;
 

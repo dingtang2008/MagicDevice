@@ -87,7 +87,7 @@ public final class RootTools {
      * by default for the 3 callback methods for Command.
      * <p/>
      * By disabling this all callbacks will be called from a thread other than
-     * the main UI thread.
+     * the dialog UI thread.
      */
     public static boolean handlerEnabled = true;
 
@@ -678,7 +678,7 @@ public final class RootTools {
 
     /**
      * This restarts only Android OS without rebooting the whole device. This does NOT work on all
-     * devices. This is done by killing the main init process named zygote. Zygote is restarted
+     * devices. This is done by killing the dialog init process named zygote. Zygote is restarted
      * automatically by Android after killing it.
      *
      * @throws TimeoutException

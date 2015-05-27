@@ -1,10 +1,9 @@
 package com.elvis.magicdevice.MainScreen;
 
-public class People {
+public class DeviceItem {
 
     private String name;
-    private int age;
-    private String address;
+    private String deviceinfo;
 
     public String getName() {
         return name;
@@ -14,20 +13,14 @@ public class People {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+
+
+    public String getDeviceinfo() {
+        return deviceinfo;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDeviceInfo(String deviceinfo) {
+        this.deviceinfo = deviceinfo;
     }
 
 }

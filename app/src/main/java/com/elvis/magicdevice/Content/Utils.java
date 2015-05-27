@@ -7,29 +7,29 @@ import com.elvis.magicdevice.BuildPropTool;
 import java.util.ArrayList;
 
 public class Utils {
-    public static final String product_model = "ro.product.model";
-    public static final String product_name = "ro.product.name";
-    public static final String product_manufacturer = "ro.product.device";
-    public static final String product_brand = "ro.product.brand";
-    public static final String basebrand = "ro.baseband";//PROPERTY_BASEBAND_VERSION = "gsm.version.baseband";
-    public static final String bluetoothname = "ro.bluetooth.name";
-    public static final String build_charaters = "ro.build.characteristics";
-    public static final String build_description = "ro.build.description";
-    public static final String build_displayid = "ro.build.display.id";
-    public static final String build_fingerprint = "ro.build.fingerprint";
-    public static final String build_host = "ro.build.host";
-    public static final String build_id = "ro.build.id";
-    public static final String build_product = "ro.build.product";
-    public static final String build_tags = "ro.build.tags";
-    public static final String build_type = "ro.build.type";
-    public static final String build_user = "ro.build.user";
-    public static final String build_all_codenames = "ro.build.version.all_codenames";
-    public static final String build_codename = "ro.build.version.codename";
-    public static final String build_incremental = "ro.build.version.incremental";
-    public static final String build_release = "ro.build.version.release";
-    public static final String build_sdk = "ro.build.version.sdk";
-    public static final String carrier = "ro.carrier";
-    public static ArrayList<String> info = new ArrayList<String>() {
+    public static final String[] product_model = new String[]{"手机型号","ro.product.model"};
+    public static final String[] product_name =new String[]{"手机名称", "ro.product.name"};
+    public static final String[] product_manufacturer = new String[]{"设备名称","ro.product.device"};
+    public static final String[] product_brand = new String[]{"品牌","ro.product.brand"};
+    public static final String[] basebrand = new String[]{"基带版本","ro.baseband"};//PROPERTY_BASEBAND_VERSION = "gsm.version.baseband";
+    public static final String[] bluetoothname = new String[]{"蓝牙名","ro.bluetooth.name"};
+    public static final String[] build_charaters =new String[]{"编译","ro.build.characteristics"};
+    public static final String[] build_description = new String[]{"软件版本","ro.build.description"};
+    public static final String[] build_displayid = new String[]{"显示版本","ro.build.display.id"};
+    public static final String[] build_fingerprint = new String[]{"编译指纹","ro.build.fingerprint"};
+    public static final String[] build_host = new String[]{"主机名","ro.build.host"};
+    public static final String[] build_id = new String[]{"编译id","ro.build.id"};
+    public static final String[] build_product = new String[]{"产品名","ro.build.product"};
+    public static final String[] build_tags = new String[]{"编译TAG","ro.build.tags"};
+    public static final String[] build_type = new String[]{"编译类型","ro.build.type"};
+    public static final String[] build_user = new String[]{"编译用户","ro.build.user"};
+    public static final String[] build_all_codenames = new String[]{"代码版本","ro.build.version.all_codenames"};
+    public static final String[] build_codename = new String[]{"code版本","ro.build.version.codename"};
+    public static final String[] build_incremental = new String[]{"增量信息","ro.build.version.incremental"};
+    public static final String[] build_release = new String[]{"Android版本","ro.build.version.release"};
+    public static final String[] build_sdk = new String[]{"SDK版本","ro.build.version.sdk"};
+    public static final String[] carrier = new String[]{"运营商信息","ro.carrier"};
+    public static ArrayList<String[]> info = new ArrayList<String[]>() {
 
 
         {
@@ -58,7 +58,7 @@ public class Utils {
         }
     };
 
-    public Utils(ArrayList<String> info) {
+    public Utils(ArrayList<String[]> info) {
         this.info = info;
     }
 }

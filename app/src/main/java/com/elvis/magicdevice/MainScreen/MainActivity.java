@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Properties;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AbsListView.LayoutParams;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,16 +36,23 @@ public class MainActivity extends Activity implements
     private PinnedHeaderExpandableListView expandableListView;
     private StickyLayout stickyLayout;
     private ArrayList<Group> groupList;
-    private ArrayList<List<People>> childList;
+    private ArrayList<List<DeviceItem>> childList;
 
     private GroupExpandableListAdapter adapter;
     private String[] groupName = new String[]{"设备信息", "模拟位置", "备份"};
+    public static int deviceinfo = 0;
+    public static int mocklocation = 1;
+    public static int backup = 2;
     public static final Properties prop = BuildPropTool.getPropMap();
+
+
+    AlertDialog.Builder builder;
+    private EditText editText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.dialog);
         expandableListView = (PinnedHeaderExpandableListView) findViewById(R.id.expandablelist);
         stickyLayout = (StickyLayout) findViewById(R.id.sticky_layout);
         initData();
@@ -75,38 +85,35 @@ public class MainActivity extends Activity implements
             groupList.add(group);
         }
 
-        childList = new ArrayList<List<People>>();
+        childList = new ArrayList<List<DeviceItem>>();
         for (int i = 0; i < groupList.size(); i++) {
-            ArrayList<People> childTemp;
-            if (i == 0) {
-                childTemp = new ArrayList<People>();
-                for (String item:Utils.info) {
-                    People people = new People();
-                    people.setName(item.toString());
-                    people.setAge(30);
-                    people.setAddress(prop.getProperty(item));
+            ArrayList<DeviceItem> childTemp;
+            if (i == deviceinfo) {
+                childTemp = new ArrayList<DeviceItem>();
+                for (String[] item : Utils.info) {
+                    DeviceItem deviceItem = new DeviceItem();
+                    deviceItem.setName(item[0]);
+                    deviceItem.setDeviceInfo(prop.getProperty(item[1]));
 
-                    childTemp.add(people);
+                    childTemp.add(deviceItem);
                 }
-            } else if (i == 1) {
-                childTemp = new ArrayList<People>();
+            } else if (i == mocklocation) {
+                childTemp = new ArrayList<DeviceItem>();
                 for (int j = 0; j < 8; j++) {
-                    People people = new People();
-                    people.setName("ff-" + j);
-                    people.setAge(40);
-                    people.setAddress("sh-" + j);
+                    DeviceItem deviceItem = new DeviceItem();
+                    deviceItem.setName("ff-" + j);
+                    deviceItem.setDeviceInfo("sh-" + j);
 
-                    childTemp.add(people);
+                    childTemp.add(deviceItem);
                 }
-            } else {
-                childTemp = new ArrayList<People>();
+            } else {//backup
+                childTemp = new ArrayList<DeviceItem>();
                 for (int j = 0; j < 23; j++) {
-                    People people = new People();
-                    people.setName("hh-" + j);
-                    people.setAge(20);
-                    people.setAddress("sh-" + j);
+                    DeviceItem deviceItem = new DeviceItem();
+                    deviceItem.setName("hh-" + j);
+                    deviceItem.setDeviceInfo("sh-" + j);
 
-                    childTemp.add(people);
+                    childTemp.add(deviceItem);
                 }
             }
             childList.add(childTemp);
@@ -193,41 +200,52 @@ public class MainActivity extends Activity implements
         }
 
         @Override
-        public View getChildView(int groupPosition, int childPosition,
+        public View getChildView(final int groupPosition, final int childPosition,
                                  boolean isLastChild, View convertView, ViewGroup parent) {
             ChildHolder childHolder = null;
-            if (convertView == null) {
+           // if (convertView == null) {
                 childHolder = new ChildHolder();
                 convertView = inflater.inflate(R.layout.child, null);
 
                 childHolder.textName = (TextView) convertView
                         .findViewById(R.id.name);
-//                childHolder.textAge = (TextView) convertView
-//                        .findViewById(R.id.age);
-                childHolder.textAddress = (TextView) convertView
-                        .findViewById(R.id.age);
+                childHolder.textAddress = (EditText) convertView
+                        .findViewById(R.id.deviceinfo);
                 childHolder.imageView = (ImageView) convertView
                         .findViewById(R.id.image);
+                final int[] tag = new int[]{groupPosition, childPosition};
                 final BootstrapButton button = (BootstrapButton) convertView
                         .findViewById(R.id.button1);
                 button.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "clicked pos=", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "clicked GroupPos=" + tag[0] + "ChinldPos" + tag[1], Toast.LENGTH_SHORT).show();
+                        editText = new EditText(MainActivity.this);
+                        builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("自定义").setView(editText);
+                        builder.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                                ((DeviceItem) getChild(groupPosition,
+                                        childPosition)).setDeviceInfo(editText.getText().toString());
+                            }
+                        }).show();
                     }
                 });
 
                 convertView.setTag(childHolder);
-            } else {
+           /* } else {
                 childHolder = (ChildHolder) convertView.getTag();
-            }
+            }*/
 
-            childHolder.textName.setText(((People) getChild(groupPosition,
+            childHolder.textName.setText(((DeviceItem) getChild(groupPosition,
                     childPosition)).getName());
-//            childHolder.textAge.setText(String.valueOf(((People) getChild(
+//            childHolder.textAge.setText(String.valueOf(((DeviceItem) getChild(
 //                    groupPosition, childPosition)).getAge()));
-            childHolder.textAddress.setText(((People) getChild(groupPosition,
-                    childPosition)).getAddress());
+            childHolder.textAddress.setText(((DeviceItem) getChild(groupPosition,
+                    childPosition)).getDeviceinfo());
 
             return convertView;
         }
@@ -261,7 +279,7 @@ public class MainActivity extends Activity implements
 
     class ChildHolder {
         TextView textName;
-        TextView textAddress;
+        EditText textAddress;
         ImageView imageView;
     }
 
