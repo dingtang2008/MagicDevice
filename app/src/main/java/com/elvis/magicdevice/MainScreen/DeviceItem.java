@@ -14,6 +14,7 @@ public class DeviceItem {
     }
 
 
+
     public String getDeviceinfo() {
         return deviceinfo;
     }

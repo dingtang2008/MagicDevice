@@ -1,0 +1,127 @@
+TASK com.elvis.magicdevice id=114
+  ACTIVITY com.elvis.magicdevice/.MainScreen.MainActivity 41f9cea0 pid=4664
+    Local Activity 4199f908 State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 ?mcc?mnc zh_CN ldltr sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h s.19}
+    FragmentManager misc state:
+      mActivity=com.elvis.magicdevice.MainScreen.MainActivity@4199f908
+      mContainer=android.app.Activity$1@4199fa98
+      mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=78294631 (462064 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{419a0c00 V.E..... R....... 0,0-720,1280}
+        com.android.internal.widget.ActionBarOverlayLayout{419a1f10 V.ED.... ........ 0,0-720,1280 #1020326 android:id/action_bar_overlay_layout}
+          android.widget.FrameLayout{419a3ff8 V.E..... ........ 0,146-720,1280 #1020002 android:id/content}
+            android.widget.RelativeLayout{419c42a8 V.E..... ........ 0,0-720,1134}
+              com.elvis.magicdevice.MainScreen.ui.StickyLayout{419c4dd0 V.E..... ........ 0,0-720,1134 #7f090038 app:id/sticky_layout}
+                android.widget.LinearLayout{419c5308 V.E..... ........ 0,0-720,0 #7f090039 app:id/sticky_header}
+                  android.widget.ImageView{419c5810 V.ED.... ......ID 312,0-408,0 #7f09003a app:id/imageView1}
+                android.widget.LinearLayout{419cf110 V.E..... ........ 0,0-720,1134 #7f09003b app:id/sticky_content}
+                  com.elvis.magicdevice.MainScreen.ui.PinnedHeaderExpandableListView{419cfa98 VFED.VC. .F...... 0,0-720,1134 #7f09003c app:id/expandablelist}
+                    android.widget.LinearLayout{41d65540 V.E..... ........ 0,-47-720,103}
+                      android.widget.LinearLayout{41d65ab8 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41d65e68 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41d6b938 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41d6c8e8 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41d6cd28 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41d727b0 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41d72b58 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41d73058 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41d73558 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41daec58 V.E..... ........ 0,105-720,255}
+                      android.widget.LinearLayout{41daf1e0 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41daf590 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41db44a8 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41db5458 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41db5898 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41dc84e8 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41dc8890 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41dc8d90 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41dc9290 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41de35b0 V.E..... ........ 0,257-720,407}
+                      android.widget.LinearLayout{41dfd678 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41dfd940 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41dfde00 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41e7f890 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41e7fcd0 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41e80118 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41e804c0 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41e809c0 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41e8e878 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41ea1978 V.E..... ........ 0,409-720,559}
+                      android.widget.LinearLayout{41ea1f00 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41eacfa8 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41ead2e0 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41eae290 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41eb5e40 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41eb6218 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41eb65c0 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41eb6ac0 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41eb6fc0 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41ed49a8 V.E..... ........ 0,561-720,711}
+                      android.widget.LinearLayout{41ed4f30 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41ed52e0 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41ed57e0 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41ee1750 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41ee1b90 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41ee1fd8 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41eecf70 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41eed470 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41eed970 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41f1b1a0 V.E..... ........ 0,713-720,863}
+                      android.widget.LinearLayout{41f1b530 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41f1b8e0 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41f1bde0 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41f216f0 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41f21b30 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41f21f78 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41f22320 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41f272d8 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41f27718 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41f563b0 V.E..... ........ 0,865-720,1015}
+                      android.widget.LinearLayout{41f56938 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41f56ce8 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41f5ba10 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41f5caf8 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41f66930 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41f66c00 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41f66f58 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41f67458 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41f67958 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+                    android.widget.LinearLayout{41f7ee30 V.E..... ........ 0,1017-720,1167}
+                      android.widget.LinearLayout{41f7f340 V.E..... ........ 6,6-530,144}
+                        android.widget.TextView{41f7f6f0 V.ED.... ........ 20,10-524,70 #7f090034 app:id/name}
+                        android.widget.EditText{41f7fbf0 VFED..CL ........ 20,70-524,170 #7f090035 app:id/deviceinfo}
+                      android.widget.ImageView{41f85690 G.ED.... ......I. 0,0-0,0 #7f090036 app:id/image}
+                      com.elvis.magicdevice.MainScreen.ui.BootstrapButton{41f85ad0 V.E...C. ........ 550,26-694,124 #7f090037 app:id/button1}
+                        android.widget.LinearLayout{41f85f18 V.E..... ........ 0,0-144,98 #7f090030 app:id/layout}
+                          android.widget.TextView{41f862c0 G.ED.... ......I. 0,0-0,0 #7f090031 app:id/lblLeft}
+                          android.widget.TextView{41fa13c8 V.ED.... ........ 0,30-144,68 #7f090032 app:id/lblMiddle}
+                          android.widget.TextView{41fa18c8 G.ED.... ......I. 0,0-0,0 #7f090033 app:id/lblRight}
+          com.android.internal.widget.ActionBarContainer{419a45e8 V.ED.... ........ 0,50-720,146 #1020327 android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{419a99f8 V.E..... ........ 0,0-720,96 #1020328 android:id/action_bar}
+              android.widget.LinearLayout{419aa230 V.....C. ........ 17,0-321,96}
+                com.android.internal.widget.ActionBarView$HomeView{419ad210 V.E..... ........ 0,0-80,96}
+                  android.widget.ImageView{419ad7b0 G.ED.... ......I. 0,0-0,0 #102025a android:id/up}
+                  android.widget.ImageView{419af288 V.ED.... ........ 8,16-72,80 #102002c android:id/home}
+                android.widget.LinearLayout{419b0bd0 V.E..... ........ 80,23-304,72}
+                  android.widget.TextView{419b1148 V.ED.... ........ 0,0-208,49 #1020265 android:id/action_bar_title}
+                  android.widget.TextView{419b1f08 G.ED.... ......I. 0,0-0,0 #1020266 android:id/action_bar_subtitle}
+              com.android.internal.view.menu.ActionMenuView{41b7c5b0 V.ED.... ......ID 720,0-720,96}
+            com.android.internal.widget.ActionBarContextView{419b26f0 G.E..... ......ID 0,0-0,0 #1020329 android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{419b79b8 G.ED.... ......ID 0,0-0,0 #102032a android:id/split_action_bar}
+    Looper (main, tid 1) {41981b48}
+      (Total messages: 0, idling=false, quitting=false)

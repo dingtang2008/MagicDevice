@@ -24,9 +24,9 @@ public class BuildPropTool{
 	private static String propReplaceFile = "/sdcard/propreplace.txt";
 
 	/**
-	 * 
+	 *
 	 * Get the value of a property
-	 * 
+	 *
 	 * @param key
 	 *            The name of the property
 	 * @param useRoot
@@ -56,7 +56,7 @@ public class BuildPropTool{
 	        Process process = null;
 	        DataOutputStream os = null;
 	        createTempFile();
-	
+
 	        try{
 	        	FileInputStream in = new FileInputStream(new File(tempFile));
                 prop.load(in);
@@ -73,9 +73,9 @@ public class BuildPropTool{
 	}
 
 	/**
-	 * 
+	 *
 	 * Gets all properties as a string array
-	 * 
+	 *
 	 * @return All properties as a string array
 	 */
 	@SuppressWarnings("unused")
@@ -116,7 +116,7 @@ public class BuildPropTool{
 	}
 	/**
 	 * Gets a property's name and value and stores them in a HashMap
-	 * 
+	 *
 	 * @param key
 	 *            The name of the property
 	 * @return The name and value in a HashMap
@@ -148,9 +148,9 @@ public class BuildPropTool{
 	}
 
 	/**
-	 * 
+	 *
 	 * Sets the value of a property
-	 * 
+	 *
 	 * @param key
 	 *            The name of the property
 	 * @param value
@@ -184,9 +184,9 @@ public class BuildPropTool{
 	}
 
 	/**
-	 * 
+	 *
 	 * Removes a property
-	 * 
+	 *
 	 * @param key
 	 *            The name of the property
 	 */
@@ -218,9 +218,9 @@ public class BuildPropTool{
 	}
 
 	/**
-	 * 
+	 *
 	 * Checks if a property exists
-	 * 
+	 *
 	 * @param key
 	 *            The name of the property
 	 * @return Whether or not the property exists
@@ -288,11 +288,11 @@ public class BuildPropTool{
 	}
 
 	/**
-	 * 
+	 *
 	 * Inserts and replaces your changes into a temporary file <br>
 	 * <br>
 	 * You do not need to call this method.
-	 * 
+	 *
 	 * @param file
 	 *            The file to replace into the second temporary file
 	 * @throws IOException

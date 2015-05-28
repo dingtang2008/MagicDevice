@@ -19,12 +19,12 @@
         <TextView
             android:id="@+id/name"
             android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="20dp"
             android:layout_marginLeft="10dp"
             android:textSize="16dp"
             android:editable="false"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical" />
 
         <EditText
             android:id="@+id/deviceinfo"
@@ -32,7 +32,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:textSize="12dp"
-            android:layout_gravity="top" />
+            style="@style/AppTheme" />
 
     </LinearLayout>
 

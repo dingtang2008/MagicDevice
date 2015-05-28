@@ -108,7 +108,7 @@ public class MainActivity extends Activity implements
                 }
             } else {//backup
                 childTemp = new ArrayList<DeviceItem>();
-                for (int j = 0; j < 23; j++) {
+                for (int j = 0; j < 2; j++) {
                     DeviceItem deviceItem = new DeviceItem();
                     deviceItem.setName("hh-" + j);
                     deviceItem.setDeviceInfo("sh-" + j);
@@ -236,10 +236,9 @@ public class MainActivity extends Activity implements
                 });
 
                 convertView.setTag(childHolder);
-           /* } else {
+           /*} else {
                 childHolder = (ChildHolder) convertView.getTag();
             }*/
-
             childHolder.textName.setText(((DeviceItem) getChild(groupPosition,
                     childPosition)).getName());
 //            childHolder.textAge.setText(String.valueOf(((DeviceItem) getChild(
