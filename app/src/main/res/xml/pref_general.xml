@@ -1,5 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
+<PreferenceCategory
+    android:title="@string/pref_header_deviceinfo">
     <CheckBoxPreference
         android:key="example_checkbox"
         android:title="@string/pref_title_social_recommendations"
@@ -9,7 +10,7 @@
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
     <EditTextPreference
-        android:key="example_text"
+        android:key="product_model"
         android:title="@string/pref_title_display_name"
         android:defaultValue="@string/pref_default_display_name"
         android:selectAllOnFocus="true"
@@ -17,7 +18,232 @@
         android:capitalize="words"
         android:singleLine="true"
         android:maxLines="1" />
-
+    <EditTextPreference
+        android:key="product_name"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="product_device"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="product_manufacturer"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="product_brand"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="basebrand"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="bluetoothname"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_charaters"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_description"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_displayid"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_fingerprint"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_host"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_id"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_product"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_tags"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_type"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_user"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_codename"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_incremental"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_release"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="build_sdk"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="carrier"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="boad"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="serial"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="imei"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+    <EditTextPreference
+        android:key="imsi"
+        android:title="@string/pref_title_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1" />
+</PreferenceCategory>
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
