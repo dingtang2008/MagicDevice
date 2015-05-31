@@ -11,4 +11,42 @@
     <string name="title_section3">Section 3</string>
 
     <string name="title_item_detail">Item Detail</string>
+
+
+
+    <string name="product_model">手机型号</string>
+    <string name="product_name">手机名称</string>
+    <string name="product_device">采用设备</string>
+    <string name="product_manufacturer">制造商</string>
+    <string name="product_brand">品牌</string>
+    <string name="basebrand">基带版本</string>
+    <string name="bluetoothname">蓝牙名</string>
+    <string name="build_charaters">编译特征</string>
+    <string name="build_description">软件版本</string>
+    <string name="build_displayid">显示版本</string>
+    <string name="build_fingerprint">编译指纹</string>
+    <string name="build_host">编译主机</string>
+    <string name="build_id">版本ID</string>
+    <string name="build_product">产品名</string>
+    <string name="build_tags">编译TAG</string>
+    <string name="build_type">编译模式</string>
+    <string name="build_user">编译用户</string>
+    <string name="build_codename">版本代号</string>
+    <string name="build_incremental">版本增量</string>
+    <string name="build_release">Android版本</string>
+    <string name="build_sdk">SDK版本</string>
+    <string name="carrier">运营商信息</string>
+    <string name="boad">平台</string>
+    <string name="serial">手机序列号</string>
+    <string name="imei">IMEI码</string>
+    <string name="imsi">IMSI</string>
+    <string name="androidid">Android ID</string>
+    <string name="wifiname">WIFI名称</string>
+    <string name="phonenumber">手机号码</string>
+    <string name="wifimac">WIFI MAC地址</string>
+    <string name="btaddr">蓝牙地址</string>
+
+
+
+
 </resources>

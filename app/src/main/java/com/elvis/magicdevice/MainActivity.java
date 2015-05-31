@@ -3,22 +3,15 @@ package com.elvis.magicdevice;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.View;
 import android.widget.TextView;
 
-import com.elvis.magicdevice.RootTools.GeneratorUtil;
 import com.elvis.magicdevice.RootTools.NameGenerator;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.elvis.magicdevice.RootTools.GeneratorUtil.*;
-import static com.elvis.magicdevice.RootTools.GeneratorUtil.imei_gen;
 
 /**
  * @author Elvis Ding
@@ -74,7 +67,7 @@ public class MainActivity extends Activity {
         imei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e(TAG, imei_gen());
+                //Log.e(TAG, imei_gen());
             }
         });
 
@@ -95,7 +88,7 @@ public class MainActivity extends Activity {
 
             Log.e(TAG, str);
         }
-        imei.setText(generatorIMSI());
+       // imei.setText(generatorIMSI());
         NameGenerator gen = new NameGenerator();
         for (int i = 0; i < 30; i++) {
             System.out.println(gen.getName());

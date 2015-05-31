@@ -70,7 +70,7 @@ public class NameGenerator {
         return firstCharUppercase(getNameByInstructions(getRandomElementFrom(nameInstructions)));
     }
 
-    private int randomInt(int min, int max) {
+    public int randomInt(int min, int max) {
         return (int) (min + (Math.random() * (max + 1 - min)));
     }
 

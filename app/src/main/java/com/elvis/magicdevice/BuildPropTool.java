@@ -22,7 +22,7 @@ public class BuildPropTool{
 
 	private static String tempFile = "/sdcard/buildprop.tmp";
 	private static String propReplaceFile = "/sdcard/propreplace.txt";
-
+	public static final Properties prop = BuildPropTool.getPropMap();
 	/**
 	 *
 	 * Get the value of a property

@@ -1,9 +1,23 @@
 package com.elvis.magicdevice.MainScreen;
 
-public class DeviceItem {
+import com.elvis.magicdevice.BuildPropTool;
+
+import java.io.Serializable;
+
+public class DeviceItem implements Serializable{
+
 
     private String name;
-    private String deviceinfo;
+    private String key;
+    private String defaultvalue;
+    private String targetValue = "NULL";
+
+
+    public DeviceItem(String[] item) {
+        this.name = item[0];
+        this.key = item[1];
+        this.defaultvalue = BuildPropTool.prop.getProperty(key,"NULL");
+    }
 
     public String getName() {
         return name;
@@ -13,14 +27,29 @@ public class DeviceItem {
         this.name = name;
     }
 
-
-
-    public String getDeviceinfo() {
-        return deviceinfo;
+    public String getDefaultvalue() {
+        return defaultvalue;
     }
 
-    public void setDeviceInfo(String deviceinfo) {
-        this.deviceinfo = deviceinfo;
+    public void setDefaultvalue(String defaultvalue) {
+        this.defaultvalue = defaultvalue;
+    }
+
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getTargetValue() {
+        return targetValue;
+    }
+
+    public void setTargetValue(String targetValue) {
+        this.targetValue = targetValue;
     }
 
 }

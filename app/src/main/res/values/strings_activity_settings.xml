@@ -12,7 +12,7 @@
     </string>
 
     <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_default_display_name">""</string>
 
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
     <string-array name="pref_example_list_titles">
@@ -50,7 +50,7 @@
     <string name="pref_title_system_sync_settings">System sync settings</string>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_header_btwifi">蓝牙&amp;WIFI&amp;GPS</string>
     <string name="pref_header_deviceinfo">手机信息</string>
     <string name="pref_title_new_message_notifications">New message notifications</string>
 
