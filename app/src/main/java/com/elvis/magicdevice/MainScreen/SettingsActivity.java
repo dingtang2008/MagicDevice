@@ -1,5 +1,6 @@
 package com.elvis.magicdevice.MainScreen;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -17,6 +18,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
+import com.elvis.magicdevice.FileChooser.FileChooserActivity;
 import com.elvis.magicdevice.MainScreen.ui.BootstrapButton;
 import com.elvis.magicdevice.R;
 
@@ -159,6 +161,9 @@ public class SettingsActivity extends PreferenceActivity {
             @Override
             public void onClick(View view) {
                 updatePreferences(true);
+                Intent intent =new Intent();
+                intent.setClass(SettingsActivity.this, FileChooserActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -333,7 +338,7 @@ public class SettingsActivity extends PreferenceActivity {
 
     public static void writeObjectToFile(Object obj) {
         createSDCardDir();
-        File file = new File(Environment.getExternalStorageDirectory() + "/test.dat");
+        File file = new File(Environment.getExternalStorageDirectory() + "/MagicDevice/Profile/test.dat");
         FileOutputStream out;
         try {
             out = new FileOutputStream(file);
@@ -350,7 +355,7 @@ public class SettingsActivity extends PreferenceActivity {
 
     public static Object readObjectFromFile() {
         Object temp = null;
-        File file = new File(Environment.getExternalStorageDirectory() + "/test.dat");
+        File file = new File(Environment.getExternalStorageDirectory() + "/MagicDevice/Profile/test.dat");
 
         if (!file.exists()) {
             try {
